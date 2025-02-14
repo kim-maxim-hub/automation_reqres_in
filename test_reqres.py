@@ -45,7 +45,7 @@ def test_job_name_from_request_returns_in_response():
 def test_get_users_returns_unique_users():
     response = requests.get(
         url="https://reqres.in/api/users",
-        params={"page": 2, "per_page": 4},
+        params={"page": 2, "per_page": 6},
         verify=False
     )
     ids = [element["id"] for element in response.json()["data"]]
